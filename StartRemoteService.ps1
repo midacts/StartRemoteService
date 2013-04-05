@@ -1,8 +1,8 @@
 #####################
 ###SINGLE COMPUTER###
 #####################
-$comp = # computer name
-$service = # service name
+$comp = "# computer name"
+$service = "# service name"
 
 
 (get-wmiobject -computer $comp win32_service -filter "Name='$service'").invokemethod("Startservice",$null)
@@ -11,7 +11,7 @@ $service = # service name
 ###################
 ###ALL COMPUTERS###
 ###################
-$service = # service name
+$service = "# service name"
 $list = get-content "# FILENAME"
 
 foreach($comp in $list){
